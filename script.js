@@ -16,7 +16,12 @@ function multiply(num1, num2) {
 }
 
 function divide(num1, num2) {
-    return num1 / num2;
+    if (num1 === 0 || num2 === 0) {
+        alert("Ayo");
+    }
+    else {
+        return Math.round((num1 / num2) * 100) / 100;
+    }
 }
 
 function solve() {
@@ -49,7 +54,11 @@ function solve() {
 function updateExpression(e) {
     if (e.target.tagName === "BUTTON") {
         if (e.target.classList.contains("calc-operator")) {
-            if (currentOperation[0] != undefined) {
+            if (!currentOperation.includes(undefined)) {
+                solve();
+                currentOperation[1] = e.target.value;
+            }
+            else if (currentOperation[0] != undefined) {
                 currentOperation[1] = e.target.value;
             }
         }
