@@ -96,4 +96,18 @@ function updateDisplay(expression) {
     });
 }
 
+function handleKeyPress(e) {
+    let buttons = document.querySelectorAll("button");
+    if (e.key == "Enter") {
+        buttons.item(15).click();
+    }
+    buttons.forEach(element => {
+        if (e.key == element.value) {
+            element.click();
+        }
+    })
+    }
+
 divCalculator.addEventListener("click", updateExpression);
+
+document.addEventListener("keydown", handleKeyPress);

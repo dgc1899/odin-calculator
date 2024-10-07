@@ -51,7 +51,7 @@ body {
     justify-content: center;
     align-items: center;
     width: 75%;
-    height: 90%;
+    height: 70%;
 }
 
 .calc-operator-container {
@@ -74,6 +74,6 @@ button {
     border-radius: 100%;
     border-style: none;
     background-color: gray;
-    height: 25%;
+    height: 30%;
     width: 25%;
 }
